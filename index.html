@@ -15,7 +15,7 @@
         <div class="imagemFundo">
             <img src="img/vetor3.jpg" class="vetor">
         </div>
-
+    
         <div id="imgResimania">
             <img src="img/resimania.png" class="imgResimania">
         </div>
@@ -25,7 +25,8 @@
                 <span class="material-symbols-outlined">search</span>
             </label>
 
-            <input type="text" id="inputPesquisa" placeholder="Pequisa">
+            <input type="text" id="inputPesquisa" placeholder="Pequisar tamanhos ex: 14 x 10">
+            <!--<div class="teste"></div>-->
         </div>
 
     </section>    
@@ -114,12 +115,58 @@
 
     <h2 id="port">Meu Portfólio</h2>
     <section id="portfolio">
-        
-        <div class="imagem">
-            <img src="img/img1.jpeg" class="imgImage">
-            <!--<img src="img/img2.jpeg" class="imgImage">
-            <img src="img/img3.jpeg" class="imgImage">
-            <img src="img/img4.jpeg" class="imgImage">-->
+
+        <div id="slider">
+
+            <input type="radio" name="slider" id="slide1" checked>
+            <input type="radio" name="slider" id="slide2">
+            <input type="radio" name="slider" id="slide3">
+            <input type="radio" name="slider" id="slide4">
+            
+            <div id="slides">
+                <div id="overflow">
+                    <div class="inner">
+                        <div class="slide slide_1">
+                            <div class="slide-content">
+                                <img src="img/img1.jpeg" class="img1">
+                            </div>
+                        </div>
+    
+                        <div class="slide slide_2">
+                            <div class="slide-content">
+                                <img src="img/img2.jpeg" class="img2">
+                            </div>
+                        </div>
+    
+                        <div class="slide slide_3">
+                            <div class="slide-content">
+                                <img src="img/img3.jpeg" class="img3">
+                            </div>
+                        </div>
+    
+                        <div class="slide slide_4">
+                            <div class="slide-content">
+                                <img src="img/img4.jpeg" class="img4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div id="controls">
+                <label for="slide1"></label>
+                <label for="slide1"></label>
+                <label for="slide3"></label>
+
+            </div>
+    
+            <div id="bullets">
+                <label for="slide1"></label>
+                <label for="slide2"></label>
+                <label for="slide3"></label>
+                <label for="slide4"></label>
+            </div>
+    
         </div>
         
     </section>
@@ -133,17 +180,14 @@
             <img src="img/imagem1.jpeg" class="imgClientes">
             <img src="img/imagem2.jpeg" class="imgClientes">
             <img src="img/imagem3.jpeg" class="imgClientes">
-            <img src="img/imagem2.jpeg" class="imgClientes">
-            <img src="img/imagem3.jpeg" class="imgClientes">
-            <img src="img/imagem2.jpeg" class="imgClientes">
-            <img src="img/imagem3.jpeg" class="imgClientes">                        
+            <img src="img/imagem4.jpg" class="imgClientes">                        
         </div>
 
     </section>
 
     <section id="contato" class="formulario">
 
-        <form name="frm" action="#" method="post" required>
+        <form name="frm" action="php/send.php" method="post" required>
 
             <fieldset><h3>Entre em Contato</h3><br/><br/>
 
@@ -157,12 +201,12 @@
                 <input type="text" id="assunto" name="assunto" required>
 
                 <label for="telefone">*Telefone:</label>
-                <input type="text" id="telefone" name="telefone" required>
+                <input type="text" id="telefone" name="telefone" maxlength="11" required>
 
                 <label for="mensagem">*Mensagem:</label>
                 <textarea id="mensagem" name="mensagem" required></textarea>
 
-                <button type="submit">Enviar</button>
+                <button name="send" type="submit">Enviar</button>
 
             </fieldset>
 
